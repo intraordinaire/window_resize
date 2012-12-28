@@ -12,8 +12,8 @@ PLUS :
 
 Changelog
 =============
-V1.0.1 : Correct bug for only 'width' or 'height' without diff
-V1.0   : Initial release
+* V1.0.1 : Correct bug for only 'width' or 'height' without diff
+* V1.0   : Initial release
 
 Example
 =============
@@ -30,3 +30,7 @@ function onWindowResize(evt) {
 };
 </code>
 </pre>
+
+More examples
+=============
+<a href="http://intraordinaire.github.com/window_resize/">Visit website</a>
