@@ -5,7 +5,7 @@
  * Latest version and complete README available on Github:
  * https://github.com/intraordinaire/window_resize
  *
- * @version 1.0
+ * @version 1.0.1
  * Copyright 2012 Vincent Garcia
  * @author Vincent Garcia https://github.com/intraordinaire/
  * Licensed under the MIT license.
@@ -35,7 +35,7 @@
                     if (this.settings.callback == null) {
                         return;
                     }
-                    if (this.settings.type != 'both' && this.settings.type != 'both' && this.settings.type != 'both') {
+                    if (this.settings.type != 'both' && this.settings.type != 'width' && this.settings.type != 'height') {
                         this.settings.type = 'both';
                     }
 
@@ -62,7 +62,7 @@
                     return this.settings.callback.apply(this, [this.evt]);
                 },
                 isResized: function () {
-                    if (($.browser.msie && parseInt($.browser.version, 10) < 9) || (this.settings.diff_height != false || this.settings.diff_width != false)) {
+                    if (($.browser.msie && parseInt($.browser.version, 10) < 9) || (this.settings.diff_height != false || this.settings.diff_width != false) || this.settings.type != 'both') {
                         var current_height = $(window).height();
                         var checked_height = (!this.settings.diff_height && current_height != this.window_height) || (this.settings.diff_height && (parseInt(this.settings.diff_height) < parseInt(this.window_height - current_height) || (parseInt(this.settings.diff_height) * -1) > parseInt(this.window_height - current_height)));
                         var current_width = $(window).width();

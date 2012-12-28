@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="../libs/prettify/prettify.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../libs/prettify/prettify.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../src/jquery.window_resize.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    jQuery(window).windowResize(
+	{
+		callback   :onWindowResize,
+        diff_width :150,
+        type       :'width'
+	});
+		
+	function onWindowResize(evt) {
+	    jQuery('#result').prepend('<br/>You resize my window more than 150PX !');
+	};
+    </script>
+</head>
+<body onload="prettyPrint()">
+<h2>Code</h2>
+<pre class="prettyprint linenums">
+jQuery(window).windowResize(
+{
+    callback   :onWindowResize,
+    diff_width :150,
+    type       :'width'
+});
+	
+function onWindowResize(evt) {
+    jQuery('#result').prepend('&lt;br/&gt;You resize my window more than 150PX !');
+};
+</pre>
+<h2>Result</h2>
+<div id="result">
+</div>
+</body>
+</html>
