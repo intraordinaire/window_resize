@@ -36,7 +36,7 @@
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
-          <h1>window_resize</h1>
+          <h2>window_resize</h2>
 
 <p>Attach it to the window.
 It resolve the IE &lt; 9 problem of window resize who fire event on each DOM element.</p>
@@ -47,12 +47,14 @@ It resolve the IE &lt; 9 problem of window resize who fire event on each DOM ele
 <li>You can add a timeout.</li>
 <li>You can chose if you want to watch only "width", "height" or "both" resize.</li>
 <li>You can add an minimum "diff" pixels on width and height resize.</li>
-</ul><h1>Changelog</h1>
+</ul><h2>Changelog</h2>
 
-<p>V1.0.1 : Correct bug for only 'width' or 'height' without diff
-V1.0   : Initial release</p>
+<ul>
+  <li>V1.0.1 : Correct bug for only 'width' or 'height' without diff</li>
+  <li>V1.0 : Initial release</li>
+</ul>
 
-<h1>Example</h1>
+<h2>Example</h2>
 
 <pre>
     <code>
@@ -67,6 +69,14 @@ function onWindowResize(evt) {
 };
 </code>
 </pre>
+<h2>More examples</h2>
+<ul>
+  <li><a href="examples/example_classic.html">Classic example</a></li>
+  <li><a href="examples/example_delay.html">Delay</a></li>
+  <li><a href="examples/example_height_only.html">Only height</a></li>
+  <li><a href="examples/example_width_diff.html">Diff Width</a></li>
+</ul>
+
         </article>
       </div>
     </div>
