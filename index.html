@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="libs/prettify/prettify.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="libs/prettify/prettify.js" charset="utf-8"></script>
+</head>
+<body onload="prettyPrint()">
+<h2>Parameters</h2>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Param</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Default</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>callback</td>
+			<td>function</td>
+			<td>The function you want to execute on window resize.</td>
+			<td>null</td>
+		</tr>
+		<tr>
+			<td>timeout</td>
+			<td>Integer (milliseconds)</td>
+			<td>If you want a delay before sending the function.</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>String ('width', 'height' or 'both')</td>
+			<td>Listen the 'width', 'height' or 'both' resize.</td>
+			<td>both</td>
+		</tr>
+		<tr>
+			<td>diff_height</td>
+			<td>Integer or false</td>
+			<td>If set, the minimum diff in pixels height to fire event, else fire event for each px.</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td>diff_width</td>
+			<td>Integer or false</td>
+			<td>If set, the minimum diff in pixels width to fire event, else fire event for each px.</td>
+			<td>false</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Example</h2>
+<pre class="prettyprint linenums">
+jQuery(window).windowResize(
+{
+	callback: onWindowResize,
+	timeout: 500
+});
+	
+function onWindowResize(evt) {
+    console.log('onWindowResize');
+};
+</pre>
+</body>
+</html>
