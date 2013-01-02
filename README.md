@@ -12,6 +12,7 @@ PLUS :
 
 Changelog
 =============
+* V1.1   : Add "steps" parameters
 * V1.0.1 : Correct bug for only 'width' or 'height' without diff
 * V1.0   : Initial release
 
